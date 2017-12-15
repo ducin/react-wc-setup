@@ -1,3 +1,9 @@
+# bundles
+dist
+
+# IDEs
+.vscode
+
 # Logs
 logs
 *.log
