@@ -1,0 +1,28 @@
+.MyHello {
+    text-align: center;
+  }
+  
+.MyHello-logo {
+  animation: MyHello-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.MyHello-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.MyHello-title {
+  font-size: 1.5em;
+}
+
+.MyHello-intro {
+  font-size: large;
+}
+
+@keyframes MyHello-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
