@@ -18,8 +18,11 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "@skatejs/renderer-react": "^0.1.0",
     "@webcomponents/webcomponentsjs": "^1.0.20",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "define": "^1.0.1",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "skatejs": "^5.0.0"
   }
 }

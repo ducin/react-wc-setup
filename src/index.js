@@ -3,3 +3,4 @@
 
 // all components below
 import './components/my-hello/my-hello';
+import './components/skate-hello/skate-hello';
