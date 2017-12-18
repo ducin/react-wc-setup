@@ -4,19 +4,32 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './src/index.html',
   filename: 'index.html',
   inject: 'body'
-})
+});
+
+const devServerPort = 8083;
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    hmr: [
+      'webpack-dev-server/client?http://localhost:' + devServerPort,
+    ],
+    bundle: "./src/index.js"
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader' },
-      { test: /\.jsx?$/, loader: 'babel-loader' }
-    ]
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
+    ],
   },
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [
+    HtmlWebpackPluginConfig
+  ],
+  devServer: {
+    port: devServerPort,
+    inline: true
+  }
 }

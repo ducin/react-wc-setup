@@ -1,7 +1,12 @@
+.test-me {
+  text-align: center;
+  color: fuchsia;
+}
+
 .MyHello {
-    text-align: center;
-  }
-  
+  text-align: center;
+}
+
 .MyHello-logo {
   animation: MyHello-logo-spin infinite 20s linear;
   height: 80px;

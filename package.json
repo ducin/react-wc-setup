@@ -1,13 +1,11 @@
 {
-  "name": "react-startpack",
+  "name": "react-webcomponents-wrapper",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:andela-jwarugu/react-startpack.git",
-  "author": "andela-jwarugu <joy.warugu@andela.com>",
+  "author": "Tomasz Ducin <tomasz.ducin@gmail.com>",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --watch",
+    "build": "webpack"
   },
-  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
@@ -18,11 +16,8 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "@skatejs/renderer-react": "^0.1.0",
     "@webcomponents/webcomponentsjs": "^1.0.20",
-    "define": "^1.0.1",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
-    "skatejs": "^5.0.0"
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
   }
 }

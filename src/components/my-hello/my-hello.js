@@ -4,11 +4,10 @@ import Hello from './Hello';
 
 customElements.define('my-hello', class MyHello extends HTMLElement {
     connectedCallback() {
-        // with Shadow DOM
+        // - with Shadow DOM
         this.root = this.attachShadow({ mode: 'open' });
-        debugger;
         ReactDOM.render(<Hello />, this.root);
-        // without Shadow DOM
+        // - without Shadow DOM
         // ReactDOM.render(<MyHello />, this);
     }
 });
