@@ -28,6 +28,11 @@ class SkateHelloReact extends withComponent(withReact()) {
 }
 
 class ReactAsSkateHello extends withReact(withComponent()) {
+  static get props() {
+    return {
+      name: props.string
+    };
+  }
   render( ) {
     return (
       <div>
