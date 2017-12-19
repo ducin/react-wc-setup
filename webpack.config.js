@@ -5,16 +5,16 @@ const devServerPort = 8083;
 
 module.exports = {
   entry: {
-    bundle: "./src/index.js"
+    bundle: "./src/index.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: '[name].js'
+    filename: '[name].[hash:8].js'
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader', /*exclude: /node_modules/*/ },
-      { test: /\.jsx?$/, loader: 'babel-loader', /*exclude: /node_modules/*/ },
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
     ],
   },
   plugins: [

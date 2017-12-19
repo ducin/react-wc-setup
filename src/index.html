@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>React + WebComponents</title>
+    <script>if (!window.customElements) { document.write('<!--'); }</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.21/custom-elements-es5-adapter.js"></script>
+    <!--! do not remove -->
   </head>
   <body>
-    <select id="carSelect">
+    <select id="veggieSelect">
       <option value>- choose one -</option>
       <option value="Carrot">Carrot</option>
       <option value="Onion">Onion</option>
@@ -19,8 +22,8 @@
     <!-- <hello-wrapper name="shadowed React + WebComponents" shadow></hello-wrapper> -->
     <hello-mini-wrapper></hello-mini-wrapper>
     <div id="outside"></div>
-    <!-- <skate-hello name="World"></skate-hello>
+    <skate-hello name="World"></skate-hello>
     <skate-hello-react name="Kot"></skate-hello-react>
-    <react-as-skate-hello></react-as-skate-hello> -->
+    <react-as-skate-hello></react-as-skate-hello>
   </body>
 </html>
