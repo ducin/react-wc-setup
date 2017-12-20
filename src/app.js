@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MyHello from './components/my-hello/MyHello';
+import './components/skate-hello/skate-hello';
 
 const state = {
     phrase: "pure React"

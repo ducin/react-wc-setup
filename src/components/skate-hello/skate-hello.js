@@ -1,6 +1,6 @@
 import { props, withComponent } from 'skatejs';
 import withReact from '@skatejs/renderer-react';
-import React from 'react';
+import React, { Component } from 'react';
 import Hello from '../my-hello/Hello';
 
 
@@ -27,18 +27,28 @@ class SkateHelloReact extends withComponent(withReact()) {
   }
 }
 
+class ReactWithManyProps extends Component {
+  render() {
+    return (
+      <div>
+        name: {this.props.name}, kot: {this.props.kot} 
+      </div>
+    );
+  }
+
+}
+
+
 class ReactAsSkateHello extends withReact(withComponent()) {
   static get props() {
     return {
-      name: props.string
+      name: props.string,
+      kot: props.string
     };
   }
   render( ) {
     return (
-      <div>
-        <span>elo mordo</span>
-        <Hello />
-      </div>
+        <ReactWithManyProps name={this.props.name} kot={this.props.kot}/>
     );
   }
 }
