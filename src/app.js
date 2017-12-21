@@ -11,6 +11,7 @@ let render;
 
 const $outside = document.getElementById("outside");
 const $wrappers = document.querySelectorAll('hello-wrapper');
+const $skates = document.querySelectorAll('skate-hello-wrapper');
 const $veggie = document.getElementById("veggieSelect");
 $veggie.addEventListener('change', (e) => {
     state.phrase = e.target.value;
@@ -23,12 +24,14 @@ const dialog = () => {
 }
 
 $wrappers.forEach(w => w.onClickHere = dialog);
+$skates.forEach(w => w.onClickHere = dialog);
 
 const renderReact = () => {
     ReactDOM.render(<MyHello name={state.phrase} onClickHere={dialog} />, $outside);
 }
 const renderWC = () => {
     $wrappers.forEach(el => el.setAttribute('name', state.phrase));
+    $skates.forEach(el => el.setAttribute('name', state.phrase));
 }
 render = () => {
     renderReact();

@@ -6,21 +6,36 @@
     <script>if (!window.customElements) { document.write('<!--'); }</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.21/custom-elements-es5-adapter.js"></script>
     <!--! do not remove -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-hi-sd-ce.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
   </head>
   <body>
     <select id="veggieSelect">
       <option value>- choose one -</option>
+      <option value="Asparagus">Asparagus</option>
       <option value="Carrot">Carrot</option>
+      <option value="Cucumber">Cucumber</option>
       <option value="Onion">Onion</option>
       <option value="Salad">Salad</option>
-      <option value="Cucumber">Cucumber</option>
     </select>
 
+    <hr />
+
+    <div id="outside"></div>
+    
     <hr />
 
     <hello-wrapper name="non-shadowed React + WebComponents"></hello-wrapper>
     <!-- <hello-wrapper name="shadowed React + WebComponents" shadow></hello-wrapper> -->
     <hello-mini-wrapper></hello-mini-wrapper>
-    <div id="outside"></div>
+
+    <hr />
+
+    <skate-hello name="Shiro"></skate-hello>
+    <skate-hello-react-style name="Shmiro"></skate-hello-react-style>
+
+    <react-example-skate name="szymon" kot="Kot fajny"></react-example-skate>
+    <skate-hello-wrapper name="React + SkateJS"></skate-hello-wrapper>
   </body>
 </html>
