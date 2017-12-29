@@ -9,3 +9,4 @@ import './components/my-hello/skate-hello-wrapper';
 // web components are used from HTML level
 
 import './app';
+import './app.scss';
