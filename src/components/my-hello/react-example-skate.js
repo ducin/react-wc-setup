@@ -8,12 +8,13 @@ class ReactExampleSkate extends withReact(withComponent()) {
   static get props() {
     return {
       name: props.string,
-      kot: props.string
+      kot: props.string,
+      className: 'kot'
     };
   }
   render() {
     return (
-      <ReactWithManyProps name={this.props.name} kot={this.props.kot}/>
+      <ReactWithManyProps  name={this.props.name} kot={this.props.kot}/>
     );
   }
 }

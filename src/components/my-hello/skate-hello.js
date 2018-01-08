@@ -9,7 +9,17 @@ class SkateHello extends withComponent() {
     };
   }
   render({ name }) {
-    return `Hello, ${name}!`;
+    return `
+    <style>
+    .szymon {
+      background: yellow;
+    }
+    :host {
+      background: green;
+    }
+    </style>
+    <div class='szymon'>Hello, ${name}!</div>
+    `;
   }
 }
 
@@ -20,7 +30,7 @@ class SkateHelloReactStyle extends withComponent(withReact()) {
     };
   }
   render({ name }) {
-    return <span>Hello, {name}!</span>;
+    return <span>Hello, i am a skate compoenent with styles in shadow{name}!</span>;
   }
 }
 
